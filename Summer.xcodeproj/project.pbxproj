@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98A137D7213691C6001D6847 /* DisplayLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137D6213691C6001D6847 /* DisplayLinkViewController.swift */; };
+		98A137DA21369A28001D6847 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137D921369A28001D6847 /* AnimatedLabel.swift */; };
+		98A137DC21369D3F001D6847 /* DWHollowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137DB21369D3F001D6847 /* DWHollowLabel.swift */; };
+		98A137DE21369D60001D6847 /* DWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137DD21369D60001D6847 /* DWAnimator.swift */; };
 		FEE982FD1F740557002ADCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE982FC1F740557002ADCE1 /* AppDelegate.swift */; };
 		FEE982FF1F740557002ADCE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE982FE1F740557002ADCE1 /* ViewController.swift */; };
 		FEE983021F740557002ADCE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE983001F740557002ADCE1 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98A137D6213691C6001D6847 /* DisplayLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLinkViewController.swift; sourceTree = "<group>"; };
+		98A137D921369A28001D6847 /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
+		98A137DB21369D3F001D6847 /* DWHollowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWHollowLabel.swift; sourceTree = "<group>"; };
+		98A137DD21369D60001D6847 /* DWAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWAnimator.swift; sourceTree = "<group>"; };
 		FEE982F91F740557002ADCE1 /* Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE982FC1F740557002ADCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE982FE1F740557002ADCE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98A137D8213699E7001D6847 /* DWAnimatedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				98A137D921369A28001D6847 /* AnimatedLabel.swift */,
+				98A137DB21369D3F001D6847 /* DWHollowLabel.swift */,
+				98A137DD21369D60001D6847 /* DWAnimator.swift */,
+			);
+			path = DWAnimatedLabel;
+			sourceTree = "<group>";
+		};
 		FEE982F01F740557002ADCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +117,10 @@
 		FEE982FB1F740557002ADCE1 /* Summer */ = {
 			isa = PBXGroup;
 			children = (
+				98A137D8213699E7001D6847 /* DWAnimatedLabel */,
 				FEE982FC1F740557002ADCE1 /* AppDelegate.swift */,
 				FEE982FE1F740557002ADCE1 /* ViewController.swift */,
+				98A137D6213691C6001D6847 /* DisplayLinkViewController.swift */,
 				FEE983001F740557002ADCE1 /* Main.storyboard */,
 				FEE983031F740557002ADCE1 /* Assets.xcassets */,
 				FEE983051F740557002ADCE1 /* LaunchScreen.storyboard */,
@@ -262,7 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A137DA21369A28001D6847 /* AnimatedLabel.swift in Sources */,
+				98A137DE21369D60001D6847 /* DWAnimator.swift in Sources */,
 				FEE982FF1F740557002ADCE1 /* ViewController.swift in Sources */,
+				98A137DC21369D3F001D6847 /* DWHollowLabel.swift in Sources */,
+				98A137D7213691C6001D6847 /* DisplayLinkViewController.swift in Sources */,
 				FEE9832D1F740BD5002ADCE1 /* DeviceInfo.swift in Sources */,
 				FEE982FD1F740557002ADCE1 /* AppDelegate.swift in Sources */,
 			);
