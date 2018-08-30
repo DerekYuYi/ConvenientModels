@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				98A137D921369A28001D6847 /* AnimatedLabel.swift */,
-				98A137DB21369D3F001D6847 /* DWHollowLabel.swift */,
 				98A137DD21369D60001D6847 /* DWAnimator.swift */,
+				98A137DB21369D3F001D6847 /* DWHollowLabel.swift */,
 			);
 			path = DWAnimatedLabel;
 			sourceTree = "<group>";

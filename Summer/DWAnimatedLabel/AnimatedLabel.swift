@@ -17,15 +17,26 @@ class AnimatedLabel: UILabel {
     // MARK: - Public Properties
     var animationType = DWAnimationType.none {
         didSet {
-            
+            _animator = DWAnimator(animationType: animationType, duration: _duration)
+            _animator?.label = self
         }
     }
     
+    override var text: String? {
+        didSet {
+            _animator?.label = self
+        }
+    }
+    
+    var placeHolderColor: UIColor?
+    
+//    private fileprivate internal open
+    
     // MARK: - Private Properties
-    private var placeHolderView: UIView?
+    private(set) var placeHolderView: UIView?
     private var _duration: TimeInterval = 4.0
-//    private var _hollowLabel:
-//    private var _animator:
+    private var _hollowLabel: DWHollowLabel?
+    private var _animator: DWAnimator?
     
     
     // MARK: - Init
@@ -37,6 +48,39 @@ class AnimatedLabel: UILabel {
         super.init(coder: aDecoder)
     }
     
+    // MARK: - Start Animation
+    func startAnimation(duration: TimeInterval, nextText: String?, completion:(() -> Void)?) {
+        guard let animator = _animator else { return }
+        if text == nil && nextText == nil {
+            return
+        } else if nextText != nil {
+            text = nextText
+        }
+        
+        _duration = duration
+        animator.duration = duration
+        animator.label = self
+        animator.startAnimation(completion)
+        
+        if animationType == .wave {
+            placeHolderView = UIView(frame: bounds)
+            if let placeHolderView = placeHolderView {
+                placeHolderView.backgroundColor = placeHolderColor ?? .lightGray
+                placeHolderView.layer.masksToBounds = true
+                addSubview(placeHolderView)
+            }
+            
+            _hollowLabel = DWHollowLabel(frame: bounds)
+            if let hollowLabel = _hollowLabel {
+                hollowLabel.text = text
+                hollowLabel.textAlignment = textAlignment
+                hollowLabel.font = font
+                hollowLabel.fillColor = backgroundColor ?? .white
+                addSubview(hollowLabel)
+            }
+        }
+    }
     
-
+    
+    
 }
