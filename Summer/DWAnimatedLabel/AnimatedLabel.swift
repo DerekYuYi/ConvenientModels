@@ -49,18 +49,13 @@ class AnimatedLabel: UILabel {
     }
     
     // MARK: - Start Animation
-    func startAnimation(duration: TimeInterval, nextText: String?, completion:(() -> Void)?) {
+    func startAnimation(duration: TimeInterval, nextText: String? = nil, completion:(() -> Void)?) {
         guard let animator = _animator else { return }
         if text == nil && nextText == nil {
             return
         } else if nextText != nil {
             text = nextText
         }
-        
-        _duration = duration
-        animator.duration = duration
-        animator.label = self
-        animator.startAnimation(completion)
         
         if animationType == .wave {
             placeHolderView = UIView(frame: bounds)
@@ -79,6 +74,11 @@ class AnimatedLabel: UILabel {
                 addSubview(hollowLabel)
             }
         }
+        
+        _duration = duration
+        animator.duration = duration
+        animator.label = self
+        animator.startAnimation(completion)
     }
     
     

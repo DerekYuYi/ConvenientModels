@@ -19,45 +19,62 @@ class DisplayLinkViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // 1. typewriter
-//        let label = AnimatedLabel(frame: CGRect(x: 20, y: 100, width: 300, height: 50))
-//        label.text = "This is a typewriter effection."
-//        label.sizeToFit()
-//        label.animationType = .typewriter
-//        label.backgroundColor = UIColor.red
-//        label.textColor = .yellow
-//        view.addSubview(label)
-//        label.startAnimation(duration: 3.0, nextText: label.text, completion: nil)
-//
-//        // 2. shine
-//        let labelShine = AnimatedLabel(frame: CGRect(x: 20, y: 190, width: 400, height: 50))
-//        labelShine.text = "Hey, I have something to say..."
-//        labelShine.sizeToFit()
-//        labelShine.animationType = .shine
-//        labelShine.backgroundColor = UIColor.red
-//        labelShine.textColor = .yellow
-//        view.addSubview(labelShine)
-//        labelShine.startAnimation(duration: 7.0, nextText: label.text, completion: nil)
-//
-//        // 3. fade
-//        let labelFade = AnimatedLabel(frame: CGRect(x: 20, y: 270, width: 500, height: 70))
-//        labelFade.text = "fade label fade label animation effection."
+        let label = AnimatedLabel(frame: CGRect(x: 10, y: 100, width: UIScreen.main.bounds.width-20, height: 60))
+        label.text = "这是打字机的的效果."
+        label.font = UIFont.systemFont(ofSize: 30, weight: .regular)
+        label.sizeToFit()
+        label.animationType = .typewriter
+        label.backgroundColor = UIColor.black
+        label.textColor = .white
+        view.addSubview(label)
+        label.startAnimation(duration: 4.0, nextText: label.text, completion: nil)
+
+        // 2. shine
+        let labelShine = AnimatedLabel(frame: CGRect(x: 10, y: 190, width: UIScreen.main.bounds.width-20, height: 70))
+        labelShine.text = "这是淡入淡出效果 - shine."
+        labelShine.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        labelShine.animationType = .shine
+        labelShine.backgroundColor = UIColor.black
+        labelShine.textColor = .white
+        view.addSubview(labelShine)
+        labelShine.startAnimation(duration: 7.0, nextText: labelShine.text, completion: nil)
+        
+        // 3. fade
+        let labelFade = AnimatedLabel(frame: CGRect(x: 10, y: 290, width: UIScreen.main.bounds.width-20, height: 70))
+        labelFade.text = "这是渐现的效果,效果很不错哦"
 //        labelFade.sizeToFit()
-//        labelFade.animationType = .fade
-//        labelFade.backgroundColor = UIColor.red
-//        labelFade.textColor = .yellow
-//        view.addSubview(labelFade)
-//        labelFade.startAnimation(duration: 6.0, nextText: labelFade.text, completion: nil)
+        labelFade.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        labelFade.animationType = .fade
+        labelFade.backgroundColor = UIColor.black
+        labelFade.textColor = .white
+        view.addSubview(labelFade)
+        labelFade.startAnimation(duration: 6.0, nextText: labelFade.text, completion: nil)
         
         // 4. wave
-        let labelWave = AnimatedLabel(frame: CGRect(x: 20, y: 330, width: 500, height: 300))
-        labelWave.text = "wave label animation effection."
-        labelWave.sizeToFit()
+        let labelWave = AnimatedLabel(frame: CGRect(x: 10, y: 390, width: UIScreen.main.bounds.width-20, height: 100))
+        labelWave.text = "LOADING" // Why can't display Chinese?
+//        label.text = "以AZ.A..F"
+        labelWave.font = UIFont.systemFont(ofSize: 70, weight: .bold)
         labelWave.animationType = .wave
-        labelWave.backgroundColor = UIColor.black
         labelWave.placeHolderColor = .gray
-        labelWave.textColor = .white
+        labelWave.backgroundColor = .black
+        labelWave.textColor = . white
+        
         view.addSubview(labelWave)
-        labelWave.startAnimation(duration: 8.0, nextText: labelWave.text, completion: nil)
+        view.backgroundColor = .black
+        labelWave.startAnimation(duration: 8.0, completion: nil)
+        
+//        let labelWave = AnimatedLabel(frame: CGRect(x: 10, y: 390, width: UIScreen.main.bounds.width-20, height: 100))
+////        labelWave.text = "正在加载"
+//        labelWave.text = "LOADING.."
+//        labelWave.font = UIFont.systemFont(ofSize: 50, weight: .bold)
+//        labelWave.animationType = .wave
+//        labelWave.backgroundColor = UIColor.black
+//        labelWave.placeHolderColor = .gray
+//        labelWave.textColor = .white
+//        view.addSubview(labelWave)
+////        labelWave.startAnimation(duration: 8.0, nextText: labelWave.text, completion: nil)
+//        labelWave.startAnimation(duration: 8.0, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

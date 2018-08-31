@@ -172,7 +172,7 @@ extension DWAnimator {
 extension DWAnimator {
     @objc private func update() {
         guard let endTime = _endTime, let label = label else { return }
-        
+        print("CADisplayLink update")
         let now  = CACurrentMediaTime()
         label.attributedText = transform(currentTime: now)
         if now >= endTime { // cancel
@@ -252,7 +252,6 @@ extension DWAnimator {
             }
             
         case .wave:
-            
             guard let shapeLayer = _shapeLayer else {
                 return nil
             }
@@ -270,28 +269,6 @@ extension DWAnimator {
                 }
             }
             shapeLayer.path = wavePath()
-            
-//            guard let shapeLayer = _shapeLayer,
-//                let label = label,
-//                let displayLink = _displayLink,
-//                var zoom = _zoom,
-//                var translate = _translate else { return nil }
-//
-//            _waveHeight -= Double(label.bounds.size.height - label.font.lineHeight) / (60 / Double(displayLink.frameInterval))
-//            translate += 0.1
-//            if !_reverse {
-//                zoom += 0.02
-//                if zoom >= 1.2 {
-//                    _reverse = true
-//                }
-//            } else {
-//                zoom -= 0.02
-//                if zoom <= 1.0 {
-//                    _reverse = false
-//                }
-//            }
-//
-//            shapeLayer.path = wavePath()
             
         default:
             break
