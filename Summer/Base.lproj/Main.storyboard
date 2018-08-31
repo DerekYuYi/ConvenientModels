@@ -35,36 +35,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大摆钟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AC-fh-BNK">
-                                <rect key="frame" x="137.5" y="343.5" width="100" height="44"/>
+                                <rect key="frame" x="161.5" y="343.5" width="52" height="44"/>
                                 <color key="backgroundColor" red="0.31794191170000002" green="0.66666668650000005" blue="0.17849570719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="MCH-ke-ClR"/>
-                                    <constraint firstAttribute="width" constant="100" id="aUJ-62-UHd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WME-W6-3wn">
-                                <rect key="frame" x="16" y="108" width="160" height="30"/>
-                                <color key="backgroundColor" red="0.66666668650000005" green="0.6357090151" blue="0.12173881390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="108" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.57607969550000004" green="0.40404618349999999" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="DKk-cN-cEh"/>
                                     <constraint firstAttribute="height" constant="30" id="fTo-lb-Qov"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <state key="normal" title="CADisPlayLink 动画展示"/>
+                                <state key="normal" title="DWAnimatedLabel Demo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="IZq-PA-Z3e" kind="show" id="BKe-WH-omP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-Wu-woE">
+                                <rect key="frame" x="16" y="158" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.57607969550000004" green="0.40404618349999999" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="ShineLabel Demo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zaI-81-fVG" kind="show" id="9Ql-7p-wsc"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4AC-fh-BNK" firstAttribute="centerY" secondItem="9jO-dR-FOt" secondAttribute="centerY" id="Acq-Ee-AEz"/>
                             <constraint firstItem="4AC-fh-BNK" firstAttribute="centerX" secondItem="9jO-dR-FOt" secondAttribute="centerX" id="DVH-Ro-gkV"/>
+                            <constraint firstItem="1IS-Wu-woE" firstAttribute="top" secondItem="WME-W6-3wn" secondAttribute="bottom" constant="20" id="IDe-0s-lav"/>
+                            <constraint firstItem="1IS-Wu-woE" firstAttribute="trailing" secondItem="WME-W6-3wn" secondAttribute="trailing" id="RSY-YI-9cZ"/>
                             <constraint firstItem="WME-W6-3wn" firstAttribute="leading" secondItem="9jO-dR-FOt" secondAttribute="leading" constant="16" id="dXU-md-ts1"/>
                             <constraint firstItem="WME-W6-3wn" firstAttribute="top" secondItem="9jO-dR-FOt" secondAttribute="top" constant="44" id="drn-QN-pPt"/>
+                            <constraint firstItem="1IS-Wu-woE" firstAttribute="height" secondItem="WME-W6-3wn" secondAttribute="height" id="fxY-ET-EgL"/>
+                            <constraint firstItem="1IS-Wu-woE" firstAttribute="leading" secondItem="WME-W6-3wn" secondAttribute="leading" id="kwG-P4-yJX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9jO-dR-FOt"/>
                     </view>
@@ -75,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="100"/>
+            <point key="canvasLocation" x="-148" y="99.400299850074973"/>
         </scene>
         <!--Display Link View Controller-->
         <scene sceneID="gMB-Xs-4w9">
@@ -90,7 +105,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75x-qM-XsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="570" y="101"/>
+            <point key="canvasLocation" x="620" y="-278"/>
+        </scene>
+        <!--Shine Page-->
+        <scene sceneID="DaL-Ez-o1j">
+            <objects>
+                <viewController storyboardIdentifier="ShinePage" id="zaI-81-fVG" customClass="ShinePage" customModule="Summer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iy2-Dq-uP9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9vj-Mv-hci">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aWj-1T-93V">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aWj-1T-93V" firstAttribute="leading" secondItem="0jd-fe-IfQ" secondAttribute="leading" id="6y1-HR-jml"/>
+                            <constraint firstItem="aWj-1T-93V" firstAttribute="bottom" secondItem="0jd-fe-IfQ" secondAttribute="bottom" id="Bwh-Rv-sh8"/>
+                            <constraint firstItem="9vj-Mv-hci" firstAttribute="top" secondItem="0jd-fe-IfQ" secondAttribute="top" id="Miw-S8-BQi"/>
+                            <constraint firstItem="0jd-fe-IfQ" firstAttribute="trailing" secondItem="9vj-Mv-hci" secondAttribute="trailing" id="RYu-Jx-Xcf"/>
+                            <constraint firstItem="0jd-fe-IfQ" firstAttribute="bottom" secondItem="9vj-Mv-hci" secondAttribute="bottom" id="RZP-eE-Abg"/>
+                            <constraint firstItem="aWj-1T-93V" firstAttribute="top" secondItem="0jd-fe-IfQ" secondAttribute="top" id="ila-Eh-tmd"/>
+                            <constraint firstItem="aWj-1T-93V" firstAttribute="trailing" secondItem="0jd-fe-IfQ" secondAttribute="trailing" id="qeA-0K-B2t"/>
+                            <constraint firstItem="9vj-Mv-hci" firstAttribute="leading" secondItem="0jd-fe-IfQ" secondAttribute="leading" id="yLh-OE-y6G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0jd-fe-IfQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstImageView" destination="9vj-Mv-hci" id="U7j-3S-GJN"/>
+                        <outlet property="secondImageView" destination="aWj-1T-93V" id="CKs-Eo-2cp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-N7-MU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="392.65367316341832"/>
         </scene>
     </scenes>
 </document>

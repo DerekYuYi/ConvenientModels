@@ -11,6 +11,10 @@
 		98A137DA21369A28001D6847 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137D921369A28001D6847 /* AnimatedLabel.swift */; };
 		98A137DC21369D3F001D6847 /* DWHollowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137DB21369D3F001D6847 /* DWHollowLabel.swift */; };
 		98A137DE21369D60001D6847 /* DWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137DD21369D60001D6847 /* DWAnimator.swift */; };
+		98FE8A2621392A3700A005B9 /* ShinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE8A2521392A3700A005B9 /* ShinePage.swift */; };
+		98FE8A2821392B4700A005B9 /* ShineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE8A2721392B4700A005B9 /* ShineLabel.swift */; };
+		98FE8A2B21392D3000A005B9 /* wallpaper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 98FE8A2A21392D3000A005B9 /* wallpaper1.png */; };
+		98FE8A2D21392D3600A005B9 /* wallpaper2.png in Resources */ = {isa = PBXBuildFile; fileRef = 98FE8A2C21392D3600A005B9 /* wallpaper2.png */; };
 		FEE982FD1F740557002ADCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE982FC1F740557002ADCE1 /* AppDelegate.swift */; };
 		FEE982FF1F740557002ADCE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE982FE1F740557002ADCE1 /* ViewController.swift */; };
 		FEE983021F740557002ADCE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE983001F740557002ADCE1 /* Main.storyboard */; };
@@ -43,6 +47,10 @@
 		98A137D921369A28001D6847 /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
 		98A137DB21369D3F001D6847 /* DWHollowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWHollowLabel.swift; sourceTree = "<group>"; };
 		98A137DD21369D60001D6847 /* DWAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWAnimator.swift; sourceTree = "<group>"; };
+		98FE8A2521392A3700A005B9 /* ShinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinePage.swift; sourceTree = "<group>"; };
+		98FE8A2721392B4700A005B9 /* ShineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineLabel.swift; sourceTree = "<group>"; };
+		98FE8A2A21392D3000A005B9 /* wallpaper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper1.png; sourceTree = "<group>"; };
+		98FE8A2C21392D3600A005B9 /* wallpaper2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper2.png; sourceTree = "<group>"; };
 		FEE982F91F740557002ADCE1 /* Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Summer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE982FC1F740557002ADCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE982FE1F740557002ADCE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +98,27 @@
 				98A137D921369A28001D6847 /* AnimatedLabel.swift */,
 				98A137DD21369D60001D6847 /* DWAnimator.swift */,
 				98A137DB21369D3F001D6847 /* DWHollowLabel.swift */,
+				98A137D6213691C6001D6847 /* DisplayLinkViewController.swift */,
 			);
 			path = DWAnimatedLabel;
+			sourceTree = "<group>";
+		};
+		98FE8A2421392A0100A005B9 /* ShineLabel */ = {
+			isa = PBXGroup;
+			children = (
+				98FE8A2521392A3700A005B9 /* ShinePage.swift */,
+				98FE8A2721392B4700A005B9 /* ShineLabel.swift */,
+			);
+			path = ShineLabel;
+			sourceTree = "<group>";
+		};
+		98FE8A2921392D2400A005B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				98FE8A2A21392D3000A005B9 /* wallpaper1.png */,
+				98FE8A2C21392D3600A005B9 /* wallpaper2.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FEE982F01F740557002ADCE1 = {
@@ -117,15 +144,16 @@
 		FEE982FB1F740557002ADCE1 /* Summer */ = {
 			isa = PBXGroup;
 			children = (
+				98FE8A2421392A0100A005B9 /* ShineLabel */,
 				98A137D8213699E7001D6847 /* DWAnimatedLabel */,
 				FEE982FC1F740557002ADCE1 /* AppDelegate.swift */,
 				FEE982FE1F740557002ADCE1 /* ViewController.swift */,
-				98A137D6213691C6001D6847 /* DisplayLinkViewController.swift */,
 				FEE983001F740557002ADCE1 /* Main.storyboard */,
 				FEE983031F740557002ADCE1 /* Assets.xcassets */,
 				FEE983051F740557002ADCE1 /* LaunchScreen.storyboard */,
 				FEE983081F740557002ADCE1 /* Info.plist */,
 				FEE9832C1F740BD5002ADCE1 /* DeviceInfo.swift */,
+				98FE8A2921392D2400A005B9 /* Resources */,
 			);
 			path = Summer;
 			sourceTree = "<group>";
@@ -211,7 +239,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Summer;
 				TargetAttributes = {
 					FEE982F81F740557002ADCE1 = {
@@ -257,6 +285,8 @@
 			files = (
 				FEE983071F740557002ADCE1 /* LaunchScreen.storyboard in Resources */,
 				FEE983041F740557002ADCE1 /* Assets.xcassets in Resources */,
+				98FE8A2D21392D3600A005B9 /* wallpaper2.png in Resources */,
+				98FE8A2B21392D3000A005B9 /* wallpaper1.png in Resources */,
 				FEE983021F740557002ADCE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,11 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A137DA21369A28001D6847 /* AnimatedLabel.swift in Sources */,
+				98FE8A2821392B4700A005B9 /* ShineLabel.swift in Sources */,
 				98A137DE21369D60001D6847 /* DWAnimator.swift in Sources */,
 				FEE982FF1F740557002ADCE1 /* ViewController.swift in Sources */,
 				98A137DC21369D3F001D6847 /* DWHollowLabel.swift in Sources */,
 				98A137D7213691C6001D6847 /* DisplayLinkViewController.swift in Sources */,
 				FEE9832D1F740BD5002ADCE1 /* DeviceInfo.swift in Sources */,
+				98FE8A2621392A3700A005B9 /* ShinePage.swift in Sources */,
 				FEE982FD1F740557002ADCE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +389,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -364,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -414,6 +448,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -421,6 +456,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
