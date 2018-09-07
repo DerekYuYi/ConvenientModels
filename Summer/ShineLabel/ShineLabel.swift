@@ -11,31 +11,31 @@ import UIKit
 class ShineLabel: UILabel {
     
     /// Fade in text animation duration. Defaults to 2.5.
-    internal var shineDuration: CFTimeInterval?
+    var shineDuration: CFTimeInterval = 2.5
     
-    internal var fadeoutDuration: CFTimeInterval?
+    var fadeoutDuration: CFTimeInterval = 2.5
     
-    internal var autoStart: Bool = false
+    var autoStart: Bool = false
     
-    internal var shining: Bool {
+    var shining: Bool {
         if let displayLink = displayLink {
             return !displayLink.isPaused
         }
         return false
     }
     
-    internal var visible: Bool {
+    var visible: Bool {
         return !fadedOut
     }
     
     /// Private Properties
     private var attributedString: NSMutableAttributedString?
-    private var characterAnimationDurations: [Double] = []
-    private var characterAnimationDelays: [Double] = []
+    private var characterAnimationDurations: [TimeInterval] = []
+    private var characterAnimationDelays: [TimeInterval] = []
     private var displayLink: CADisplayLink?
-    private var beginTime: CFTimeInterval?
-    private var endTime: CFTimeInterval?
-    private var fadedOut: Bool = false
+    private var beginTime: CFTimeInterval = 0.0
+    private var endTime: CFTimeInterval = 0.0
+    private var fadedOut: Bool = true
     private var completion: (()->Void)?
     
     override var text: String? {
@@ -51,28 +51,26 @@ class ShineLabel: UILabel {
             if let attributedText = attributedText {
                 attributedString = NSMutableAttributedString(attributedString: attributedText)
                 if let attributedString = attributedString {
-                    attributedString.addAttribute(.backgroundColor, value: textColor.withAlphaComponent(0), range: NSRange(location: 0, length: attributedString.length))
+                    attributedString.addAttribute(.foregroundColor, value: textColor.withAlphaComponent(0), range: NSRange(location: 0, length: attributedString.length))
                     
-                    guard let shineDuration = shineDuration else { return }
-                    for _ in 0..<attributedText.length {
-                        let element = Double(arc4random_uniform(UInt32((shineDuration / 2 * 100) / 100.0)))
-                        characterAnimationDelays.append(element)
-                        let remain = shineDuration - element
-                        characterAnimationDurations.append(Double(arc4random_uniform(UInt32((remain * 100) / 100.0))))
+                    for index in 0..<attributedText.length {
+                        characterAnimationDelays.append(TimeInterval(arc4random_uniform(UInt32(shineDuration) / 2 * 100) / 100))
+                        let remain = shineDuration - Double(characterAnimationDelays[index])
+                        characterAnimationDurations.append(TimeInterval(arc4random_uniform(UInt32(remain) * 100) / 100))
                     }
                 }
-               
             }
-            
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setup()
     }
     
     func setup() {
@@ -88,18 +86,18 @@ class ShineLabel: UILabel {
     }
     
     @objc func updateAttributedString() {
-        guard let attributedString = attributedString,
-            let beginTime = beginTime, let endTime = endTime else { return }
+        guard let attributedString = attributedString else { return }
         
         let now = CACurrentMediaTime()
         for index in 0..<attributedString.length {
             if CharacterSet.whitespacesAndNewlines.contains(attributedString.string[String.Index(encodedOffset: index)].unicodeScalars.first!) {
                 continue
             }
+            
             attributedString.enumerateAttribute(.foregroundColor, in: NSRange(location: index, length: 1), options: .longestEffectiveRangeNotRequired) { (value, range, stop) in
-                guard let value = value as? UIColor else { return }
-                let alpha = value.cgColor.alpha
-                let shouldUpdate = (fadedOut && alpha > 0) || (!fadedOut && alpha < 1) || (now - beginTime) >= characterAnimationDelays[index]
+                guard let color = value as? UIColor else { return }
+                let alpha = color.cgColor.alpha
+                let shouldUpdate: Bool = (fadedOut && alpha > 0) || (!fadedOut && alpha < 1) || (now - beginTime) >= characterAnimationDelays[index]
                 if !shouldUpdate { return }
                 
                 var percentage = (now - beginTime - characterAnimationDelays[index]) / characterAnimationDurations[index]
@@ -109,6 +107,10 @@ class ShineLabel: UILabel {
                 attributedString.addAttribute(.foregroundColor, value: textColor.withAlphaComponent(CGFloat(percentage)), range: range)
             }
         }
+        if let attrString = attributedString.copy() as? NSAttributedString {
+            super.attributedText = attrString
+        }
+        
         if now > endTime {
             displayLink?.isPaused = true
             if let completion = completion {
@@ -116,7 +118,7 @@ class ShineLabel: UILabel {
             }
         }
     }
-
+    
     override func didMoveToWindow() {
         super.didMoveToWindow()
         if let _ = self.window, autoStart {
@@ -128,14 +130,12 @@ class ShineLabel: UILabel {
     func shine() {
         shineWithCompletion()
     }
-    
+
     func shineWithCompletion(_ completion: (()->Void)? = nil) {
         if !shining && fadedOut {
             self.completion = completion
             fadedOut = false
-            if let shineDuration = shineDuration {
-                startAnimation(shineDuration)
-            }
+            startAnimation(shineDuration)
         }
     }
     
@@ -147,20 +147,14 @@ class ShineLabel: UILabel {
         if !shining && !fadedOut {
             self.completion = completion
             fadedOut = true
-            if let fadeoutDuration = fadeoutDuration {
-                startAnimation(fadeoutDuration)
-            }
+            startAnimation(fadeoutDuration)
         }
     }
     
     
     func startAnimation(_ duration: CFTimeInterval) {
-        guard var beginTime = beginTime,
-            var endtime = endTime,
-            let shineDuration = shineDuration else { return }
-        
         beginTime = CACurrentMediaTime()
-        endtime = beginTime + shineDuration
+        endTime = beginTime + shineDuration
         displayLink?.isPaused = false
     }
 
