@@ -11,6 +11,9 @@
 		98A137DA21369A28001D6847 /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137D921369A28001D6847 /* AnimatedLabel.swift */; };
 		98A137DC21369D3F001D6847 /* DWHollowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137DB21369D3F001D6847 /* DWHollowLabel.swift */; };
 		98A137DE21369D60001D6847 /* DWAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A137DD21369D60001D6847 /* DWAnimator.swift */; };
+		98AC2FAC21424A9C0080401B /* GradientAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AC2FAB21424A9C0080401B /* GradientAnimationView.swift */; };
+		98B8EE3F214F9CE400355343 /* VisualEffectViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B8EE3E214F9CE400355343 /* VisualEffectViewPage.swift */; };
+		98B8EE41214FAB4800355343 /* screenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B8EE40214FAB4800355343 /* screenShot.png */; };
 		98FE8A2621392A3700A005B9 /* ShinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE8A2521392A3700A005B9 /* ShinePage.swift */; };
 		98FE8A2821392B4700A005B9 /* ShineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE8A2721392B4700A005B9 /* ShineLabel.swift */; };
 		98FE8A2B21392D3000A005B9 /* wallpaper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 98FE8A2A21392D3000A005B9 /* wallpaper1.png */; };
@@ -47,6 +50,9 @@
 		98A137D921369A28001D6847 /* AnimatedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
 		98A137DB21369D3F001D6847 /* DWHollowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWHollowLabel.swift; sourceTree = "<group>"; };
 		98A137DD21369D60001D6847 /* DWAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DWAnimator.swift; sourceTree = "<group>"; };
+		98AC2FAB21424A9C0080401B /* GradientAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientAnimationView.swift; sourceTree = "<group>"; };
+		98B8EE3E214F9CE400355343 /* VisualEffectViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectViewPage.swift; sourceTree = "<group>"; };
+		98B8EE40214FAB4800355343 /* screenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenShot.png; sourceTree = "<group>"; };
 		98FE8A2521392A3700A005B9 /* ShinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinePage.swift; sourceTree = "<group>"; };
 		98FE8A2721392B4700A005B9 /* ShineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineLabel.swift; sourceTree = "<group>"; };
 		98FE8A2A21392D3000A005B9 /* wallpaper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper1.png; sourceTree = "<group>"; };
@@ -103,6 +109,23 @@
 			path = DWAnimatedLabel;
 			sourceTree = "<group>";
 		};
+		98AC2FAA2142499D0080401B /* SlideToReveal */ = {
+			isa = PBXGroup;
+			children = (
+				98AC2FAB21424A9C0080401B /* GradientAnimationView.swift */,
+			);
+			path = SlideToReveal;
+			sourceTree = "<group>";
+		};
+		98B8EE3D214F9CB000355343 /* VisualEffectView */ = {
+			isa = PBXGroup;
+			children = (
+				98B8EE40214FAB4800355343 /* screenShot.png */,
+				98B8EE3E214F9CE400355343 /* VisualEffectViewPage.swift */,
+			);
+			path = VisualEffectView;
+			sourceTree = "<group>";
+		};
 		98FE8A2421392A0100A005B9 /* ShineLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +167,8 @@
 		FEE982FB1F740557002ADCE1 /* Summer */ = {
 			isa = PBXGroup;
 			children = (
+				98B8EE3D214F9CB000355343 /* VisualEffectView */,
+				98AC2FAA2142499D0080401B /* SlideToReveal */,
 				98FE8A2421392A0100A005B9 /* ShineLabel */,
 				98A137D8213699E7001D6847 /* DWAnimatedLabel */,
 				FEE982FC1F740557002ADCE1 /* AppDelegate.swift */,
@@ -284,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE983071F740557002ADCE1 /* LaunchScreen.storyboard in Resources */,
+				98B8EE41214FAB4800355343 /* screenShot.png in Resources */,
 				FEE983041F740557002ADCE1 /* Assets.xcassets in Resources */,
 				98FE8A2D21392D3600A005B9 /* wallpaper2.png in Resources */,
 				98FE8A2B21392D3000A005B9 /* wallpaper1.png in Resources */,
@@ -317,8 +343,10 @@
 				98A137DE21369D60001D6847 /* DWAnimator.swift in Sources */,
 				FEE982FF1F740557002ADCE1 /* ViewController.swift in Sources */,
 				98A137DC21369D3F001D6847 /* DWHollowLabel.swift in Sources */,
+				98AC2FAC21424A9C0080401B /* GradientAnimationView.swift in Sources */,
 				98A137D7213691C6001D6847 /* DisplayLinkViewController.swift in Sources */,
 				FEE9832D1F740BD5002ADCE1 /* DeviceInfo.swift in Sources */,
+				98B8EE3F214F9CE400355343 /* VisualEffectViewPage.swift in Sources */,
 				98FE8A2621392A3700A005B9 /* ShinePage.swift in Sources */,
 				FEE982FD1F740557002ADCE1 /* AppDelegate.swift in Sources */,
 			);

@@ -59,15 +59,30 @@
                                     <segue destination="zaI-81-fVG" kind="show" id="9Ql-7p-wsc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNo-u8-S8O">
+                                <rect key="frame" x="16" y="208" width="158" height="30"/>
+                                <color key="backgroundColor" red="0.57607969550000004" green="0.40404618349999999" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="VisualEffectView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="66O-69-PsX" kind="show" id="jeK-It-RRq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1IS-Wu-woE" firstAttribute="top" secondItem="WME-W6-3wn" secondAttribute="bottom" constant="20" id="IDe-0s-lav"/>
                             <constraint firstItem="1IS-Wu-woE" firstAttribute="trailing" secondItem="WME-W6-3wn" secondAttribute="trailing" id="RSY-YI-9cZ"/>
+                            <constraint firstItem="iNo-u8-S8O" firstAttribute="leading" secondItem="1IS-Wu-woE" secondAttribute="leading" id="SPy-xG-UUy"/>
                             <constraint firstItem="WME-W6-3wn" firstAttribute="leading" secondItem="9jO-dR-FOt" secondAttribute="leading" constant="16" id="dXU-md-ts1"/>
                             <constraint firstItem="WME-W6-3wn" firstAttribute="top" secondItem="9jO-dR-FOt" secondAttribute="top" constant="44" id="drn-QN-pPt"/>
                             <constraint firstItem="1IS-Wu-woE" firstAttribute="height" secondItem="WME-W6-3wn" secondAttribute="height" id="fxY-ET-EgL"/>
+                            <constraint firstItem="iNo-u8-S8O" firstAttribute="height" secondItem="1IS-Wu-woE" secondAttribute="height" id="ipK-p9-76z"/>
                             <constraint firstItem="1IS-Wu-woE" firstAttribute="leading" secondItem="WME-W6-3wn" secondAttribute="leading" id="kwG-P4-yJX"/>
+                            <constraint firstItem="iNo-u8-S8O" firstAttribute="top" secondItem="1IS-Wu-woE" secondAttribute="bottom" constant="20" id="qH4-mv-srX"/>
+                            <constraint firstItem="iNo-u8-S8O" firstAttribute="trailing" secondItem="1IS-Wu-woE" secondAttribute="trailing" id="zw0-6l-orO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9jO-dR-FOt"/>
                     </view>
@@ -91,6 +106,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75x-qM-XsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="620" y="-278"/>
+        </scene>
+        <!--Visual Effect View Page-->
+        <scene sceneID="Ml9-mJ-kB2">
+            <objects>
+                <viewController storyboardIdentifier="VisualEffectViewPage" id="66O-69-PsX" customClass="VisualEffectViewPage" customModule="Summer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eO1-E2-WIG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenShot.png" translatesAutoresizingMaskIntoConstraints="NO" id="q9A-zy-eA6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q9A-zy-eA6" firstAttribute="leading" secondItem="vYq-od-Mel" secondAttribute="leading" id="4Yv-Ng-wgT"/>
+                            <constraint firstItem="vYq-od-Mel" firstAttribute="bottom" secondItem="q9A-zy-eA6" secondAttribute="bottom" id="JHJ-Wm-1VC"/>
+                            <constraint firstItem="q9A-zy-eA6" firstAttribute="top" secondItem="vYq-od-Mel" secondAttribute="top" id="hLI-Rk-9bn"/>
+                            <constraint firstItem="vYq-od-Mel" firstAttribute="trailing" secondItem="q9A-zy-eA6" secondAttribute="trailing" id="wXs-wK-Md8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vYq-od-Mel"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5k-ai-wTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="806"/>
         </scene>
         <!--Shine Page-->
         <scene sceneID="DaL-Ez-o1j">
@@ -141,4 +182,7 @@
             <point key="canvasLocation" x="620" y="392.65367316341832"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="screenShot.png" width="374" height="663"/>
+    </resources>
 </document>
